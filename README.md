@@ -1,11 +1,11 @@
 # Multiboot USB Drive With GRUB2 Bootloader
 
 <p align="left">
-  <a href="https://github.com/adi1090x/uGRUB#prepare-the-usb-drive" target="_blank"><img alt="undefined" src="https://img.shields.io/badge/Preparation-red?style=for-the-badge"></a>
-  <a href="https://github.com/adi1090x/uGRUB#install-grub2-on-the-usb-flash-drive" target="_blank"><img alt="undefined" src="https://img.shields.io/badge/Installation-green?style=for-the-badge"></a>
-  <a href="https://github.com/adi1090x/uGRUB#configuration" target="_blank"><img alt="undefined" src="https://img.shields.io/badge/Configuration-blue?style=for-the-badge"></a>
-  <a href="https://github.com/adi1090x/uGRUB#menu-entries" target="_blank"><img alt="undefined" src="https://img.shields.io/badge/Menu%20Entries-purple?style=for-the-badge"></a>
-  <a href="https://github.com/adi1090x/uGRUB#changing-themes" target="_blank"><img alt="undefined" src="https://img.shields.io/badge/Theming-orange?style=for-the-badge"></a>
+  <a href="https://github.com/3BD-R/uGRUB#prepare-the-usb-drive" target="_blank"><img alt="undefined" src="https://img.shields.io/badge/Preparation-red?style=for-the-badge"></a>
+  <a href="https://github.com/3BD-R/uGRUB#install-grub2-on-the-usb-flash-drive" target="_blank"><img alt="undefined" src="https://img.shields.io/badge/Installation-green?style=for-the-badge"></a>
+  <a href="https://github.com/3BD-R/uGRUB#configuration" target="_blank"><img alt="undefined" src="https://img.shields.io/badge/Configuration-blue?style=for-the-badge"></a>
+  <a href="https://github.com/3BD-R/uGRUB#menu-entries" target="_blank"><img alt="undefined" src="https://img.shields.io/badge/Menu%20Entries-purple?style=for-the-badge"></a>
+  <a href="https://github.com/3BD-R/uGRUB#changing-themes" target="_blank"><img alt="undefined" src="https://img.shields.io/badge/Theming-orange?style=for-the-badge"></a>
 </p>
 
 
