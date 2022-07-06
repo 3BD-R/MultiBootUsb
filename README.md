@@ -320,7 +320,7 @@ menuentry "Test memory" {
 
 Now, let's get back to our config file, there are many entries already added to the config file, but they are commented out with a `!`, you need to uncomment the menu entry before using it for the selected ISO. Replace `/path/to/iso` with the path of your ISO file.
 
-**Available Menu Entries :** `Archcraft OS`, `Arch Linux`, `Antergos`, `BlackArch`, `Manjaro`, `Elementary OS`, `Ubuntu/Kubuntu/Xubuntu`, `Kali Linux`, `Deepin OS`, `Linuxmint`, `Fedora`, `Zorin OS`, `Tiny Core` and Android based OS `Remix OS`, `Phoenix OS`, `Androidx86`.
+**Available Menu Entries :** `Archcraft OS`, `Arch Linux`, `Antergos`, `BlackArch`, `Manjaro`, `Elementary OS`, `Ubuntu/Kubuntu/Xubuntu`, `Kali Linux`, `Deepin OS`, `Linuxmint`, `Fedora`, `Zorin OS`, `Void Linux`, `Tiny Core` and Android based OS `Remix OS`, `Phoenix OS`, `Androidx86`.
 
 > Some ISO files don't boot with loopback method, in this case you need to extract the ISO to boot that OS. For example : Androidx86, Puppy Linux, Porteus OS, etc.
 
