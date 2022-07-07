@@ -200,18 +200,22 @@ $ cd $HOME
 $ git clone --depth=1 https://github.com/adi1090x/uGRUB.git
 ```
 
-- Mount the bootable USB we've created using a file manager to avoid performing further operations as `root`
+- Mount the bootable USB we've created using a file manager to avoid performing further operations as `root` OR just use 
+``` 
+$ udisksctl mount -b /dev/sdX1
+Mounted /dev/sdX1 at /path/to/USB/
+```
 
 - Copy everything from `grub` directory of repository to `/boot/grub` in the USB drive
 ```
-$ cd ~/uGRUB
+$ cd ~/MultiBootUsb
 $ cp -rf grub/* /path/to/USB/boot/grub
 ```
 > Replace `path/to/usb` with path your USB mounted on. You can get that with `lsblk` command.
 
 - Get the UUID of your USB drive
 ```
-$ sudo blkid
+$ sudo blkid | grep -i sdX1
 /dev/sdX1: ... UUID="B17C-FEDA" ...
 ```
 
