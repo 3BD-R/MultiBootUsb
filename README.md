@@ -351,9 +351,9 @@ set theme=($root)/boot/grub/themes/Stylish/theme.txt
 
 For example, to use **Tela** theme, replace every instance of `Stylish` with the `Tela`. If you want to use a different theme, make sure you load every font correctly.
 
-|Stylish|Tela|
+|Black|Tela|
 |--|--|
-|![img](previews/stylish.png)|![img](previews/tela.png)|
+|![img](previews/black.png)|![img](previews/tela.png)|
 
 |Slaze|Vimix|
 |--|--|
