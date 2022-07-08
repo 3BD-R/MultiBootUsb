@@ -11,7 +11,7 @@
 
 The ultimate guide to install and configure `grub2` bootloader on USB Flash Drive to boot multiple ISO files.
 
-![img](previews/stylish.png)
+![img](previews/black.png)
 
 It's a headache to format your USB again and again just to try out a new Linux distribution or when you want to install another distribution, **Distohoppers** can feel the pain. This guide may help you with that situation. In this guide, I'm trying to explain how you can install and configure grub2 bootloader on an USB thumb drive and then boot multiple Linux ISOs with it. So, follow this guide if you want to create one. I'll also tell you how you can boot the Linux ISO from an installed Linux OS later in this guide.
 
@@ -333,23 +333,23 @@ Now, let's get back to our config file, there are many entries already added to 
 There are already four themes available for this config, but you can add your own themes if you want. If you want to change between currently installed themes, just replace every instance of previous theme name with new theme name in these lines of config file.
 ```
 ...
-loadfont ($root)/boot/grub/themes/Stylish/dejavu_32.pf2
-loadfont ($root)/boot/grub/themes/Stylish/dejavu_sans_12.pf2
-loadfont ($root)/boot/grub/themes/Stylish/dejavu_sans_14.pf2
-loadfont ($root)/boot/grub/themes/Stylish/dejavu_sans_16.pf2
-loadfont ($root)/boot/grub/themes/Stylish/dejavu_sans_24.pf2
-loadfont ($root)/boot/grub/themes/Stylish/dejavu_sans_48.pf2
-loadfont ($root)/boot/grub/themes/Stylish/terminus-12.pf2
-loadfont ($root)/boot/grub/themes/Stylish/terminus-14.pf2
-loadfont ($root)/boot/grub/themes/Stylish/terminus-16.pf2
-loadfont ($root)/boot/grub/themes/Stylish/terminus-18.pf2
+loadfont ($root)/boot/grub/themes/black/dejavu_32.pf2
+loadfont ($root)/boot/grub/themes/black/dejavu_sans_12.pf2
+loadfont ($root)/boot/grub/themes/black/dejavu_sans_14.pf2
+loadfont ($root)/boot/grub/themes/black/dejavu_sans_16.pf2
+loadfont ($root)/boot/grub/themes/black/dejavu_sans_24.pf2
+loadfont ($root)/boot/grub/themes/black/dejavu_sans_48.pf2
+loadfont ($root)/boot/grub/themes/black/terminus-12.pf2
+loadfont ($root)/boot/grub/themes/black/terminus-14.pf2
+loadfont ($root)/boot/grub/themes/black/terminus-16.pf2
+loadfont ($root)/boot/grub/themes/black/terminus-18.pf2
 insmod jpeg
 insmod png
-set theme=($root)/boot/grub/themes/Stylish/theme.txt
+set theme=($root)/boot/grub/themes/black/theme.txt
 ...
 ```
 
-For example, to use **Tela** theme, replace every instance of `Stylish` with the `Tela`. If you want to use a different theme, make sure you load every font correctly.
+For example, to use **Tela** theme, replace every instance of `black` with the `Tela`. If you want to use a different theme, make sure you load every font correctly.
 
 |Black|Tela|
 |--|--|
