@@ -15,7 +15,7 @@ The ultimate guide to install and configure `grub2` bootloader on USB Flash Driv
 
 It's a headache to format your USB again and again just to try out a new Linux distribution or when you want to install another distribution, **Distohoppers** can feel the pain. This guide may help you with that situation. In this guide, I'm trying to explain how you can install and configure grub2 bootloader on an USB thumb drive and then boot multiple Linux ISOs with it. So, follow this guide if you want to create one. I'll also tell you how you can boot the Linux ISO from an installed Linux OS later in this guide.
 
-## Prepare the USB drive
+## 👇 Prepare the USB drive
 
 You need to boot into a Linux based operating system for this. I'm assuming that you've already done that. If not, first boot into a Linux environment (eg: Ubuntu live cd). I'm using ***Arch Linux*** here to perform these operations. Now follow the steps below :
 
@@ -35,7 +35,7 @@ nvme0n1     259:0    0 238.5G  0 disk
 ├─nvme0n1p7 259:7    0    14G  0 part 
 └─nvme0n1p8 259:8    0     1G  0 part 
 ```
-You'll get similar output. As you can see in the output above, **/dev/sda** is my USB drive. On your system, it may be different (like `/dev/sdb`, `/dev/sdc`). You can recognize your USB by it's size (mine is 32GB). ***Be careful here...***
+You'll get similar output. As you can see in the output above, **/dev/sda** is my USB drive. On your system, it may be different (like `/dev/sdb`, `/dev/sdc`). You can recognize your USB by it's size (mine is 32GB). ***⚠️ Be careful here...***
 
 **2.** Now, to modify disk, we need root access. To gain root, type...
 ```
@@ -129,7 +129,7 @@ mkfs.fat: warning - lowercase labels might not work properly with DOS or Windows
 ```
 > Ignore `lowercase labels` warnings. Remember to replace **`X`** with your USB device.
 
-## Install Grub2 on the USB Flash Drive
+## 👇 Install Grub2 on the USB Flash Drive
 
 We have successfully prepared our USB Flash Drive to install grub bootloader on it. Now let's install it, follow the steps below carefully. If you use the wrong syntax, you will receive an error stating _"Installation is impossible. Aborting"_ or something similar.
 
@@ -145,17 +145,17 @@ drwxr-xr-x 5 root root 0 Nov 14  2020 /sys/firmware/efi
 ```
 As you can see, the directory `/sys/firmware/efi` exists on my system, which means my host is booted into `UEFI` mode. Now install grub accordingly...
 
-**`If Grub2 64 bit UEFI x86_64-efi is installed on the Linux host, then type...`**
+1. **If Grub2 64 bit UEFI x86_64-efi is installed on the Linux host, then type...**
 ```
 # grub-install --force --removable --target=x86_64-efi --boot-directory=/mnt/boot --efi-directory=/mnt /dev/sdX
 ```
 
-**`If Grub2 32 bit UEFI i386-efi is installed on the Linux host, then type...`**
+2. **If Grub2 32 bit UEFI i386-efi is installed on the Linux host, then type...**
 ```
 # grub-install --force --removable --target=i386-efi --boot-directory=/mnt/boot --efi-directory=/mnt /dev/sdX
 ```
 
-**`If Grub2 BIOS i386-pc is installed on the Linux host, then type...`**
+3. **If Grub2 BIOS i386-pc is installed on the Linux host, then type...**
 ```
 # grub-install --force --removable --target=i386-pc --boot-directory=/mnt/boot /dev/sdX
 ```
@@ -190,7 +190,7 @@ Reboot your Computer, and enter your Boot Menu. Set the Boot Order to boot from 
 
 ![img](previews/grub.png)
 
-## Configuration
+## 👇 Configuration
 
 Just installing grub bootloader is not enough to boot the ISOs, We've to configure grub to load the bootable files from the ISO. Well Lucky you, I've already done that for you. I've configured grub to have nice themes with distro logo, added a lot of menu entries to boot various ISO files. However, there's a bit of configuration you need to do before you can actually boot an ISO. Follow the steps below to finish the config for you : 
 
@@ -240,7 +240,7 @@ fi
 ...
 ```
 
-### Menu Entries
+### 👉 Menu Entries
 
 Before adding or modifying menu entries in our config file, first we need to understand it's format. Below is a skeleton of a simple grub menu entry - 
 
@@ -328,7 +328,7 @@ Now, let's get back to our config file, there are many entries already added to 
 
 > Some ISO files don't boot with loopback method, in this case you need to extract the ISO to boot that OS. For example : Androidx86, Puppy Linux, Porteus OS, etc.
 
-## Changing Themes
+## 👇 Changing Themes
 
 There are already four themes available for this config, but you can add your own themes if you want. If you want to change between currently installed themes, just replace every instance of previous theme name with new theme name in these lines of config file.
 ```
@@ -388,7 +388,7 @@ menuentry 'ISO : Archcraft OS' --class archcraft {
 $ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-### FYI
+### 👉 FYI
 
 - If you manage to boot your favorite Linux ISO or updated a menu entry, You can create a Pull Request to add that menu entry here to help other people.
 - Open an issue if you want a menu entry for a specific OS, I may or may not do that but hopefully someone else does.
